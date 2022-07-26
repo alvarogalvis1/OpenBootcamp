@@ -1,0 +1,48 @@
+Primera parte:
+
+ 1. Crear una función con tres parámetros que sean números que se suman entre sí.
+ 2. Llamar a la función en el main y darle valores.
+
+Main.java
+
+public class Main {
+    public static void main(String[] args) {
+        sumaTresParam(3,6,9);
+    }
+    public static void sumaTresParam(int a, int b, int c){
+        int res = a + b +c;
+        System.out.println("La suma de los tres parámetros es: " + res);
+    }
+}
+
+
+Segunda parte:
+
+  Crear una clase coche.
+
+  Dentro de la clase coche, una variable numérica que almacene el número de puertas que tiene.
+
+  Una función que incremente el número de puertas que tiene el coche.
+
+  Crear un objeto miCoche en el main y añadirle una puerta.
+
+  Mostrar el número de puertas que tiene el objeto.
+
+
+Main.java
+
+public class Main {
+    public static void main(String[] args) {
+
+        Coche miCoche = new Coche();
+        miCoche.incrementarPuertas();
+        System.out.println("El número de puertas de mi coche es: " + miCoche.puertas);
+    }
+}
+
+class Coche {
+    int puertas = 2;
+    public void incrementarPuertas(){
+        this.puertas++;
+}
+}
