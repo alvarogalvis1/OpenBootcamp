@@ -3,8 +3,7 @@ Primera parte:
  1. Crear una función con tres parámetros que sean números que se suman entre sí.
  2. Llamar a la función en el main y darle valores.
 
-Main.java
-
+// En Java
 public class Main {
     public static void main(String[] args) {
         sumaTresParam(3,6,9);
@@ -13,6 +12,21 @@ public class Main {
         int res = a + b +c;
         System.out.println("La suma de los tres parámetros es: " + res);
     }
+}
+
+//En Go
+package main
+
+import "fmt"
+
+func main() {
+	   var resultado int
+	   sumaTresParametros(3, 6, 9, &resultado)
+	   fmt.Println(resultado)
+}
+
+func sumaTresParametros(a int, b int, c int, d *int) {
+	   *d = a + b + c
 }
 
 
@@ -28,9 +42,7 @@ Segunda parte:
 
   Mostrar el número de puertas que tiene el objeto.
 
-
-Main.java
-
+// En Java
 public class Main {
     public static void main(String[] args) {
 
@@ -45,4 +57,28 @@ class Coche {
     public void incrementarPuertas(){
         this.puertas++;
 }
+}
+
+// En GO
+package main
+
+import "fmt"
+
+type Coche struct {
+	   puertas int
+}
+
+func main() {
+    miCoche := Coche{2}
+    miCoche.incrementarPuertas()
+    miCoche.mostrarNumeroDePuertas()
+}
+
+func (coche Coche) mostrarNumeroDePuertas() {
+	   fmt.Printf("El número de puertas es %d.\n",
+		  coche.puertas)
+}
+
+func (c *Coche) incrementarPuertas() {
+	   c.puertas += 1
 }
