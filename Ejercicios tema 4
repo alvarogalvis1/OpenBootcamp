@@ -3,6 +3,33 @@ En este ejercicio practicarás las estructuras de control, para ello deberás cr
 Usando un if, crear una condición que compare si la variable numeroIf es positivo, negativo, o 0.
 Pista: Los números inferiores a 0 son negativos y los superiores, positivos.
 
+En dos archivos: Main.java, ComparaNumeroIf.java
+Main.java
+public class Main {
+    public static void main(String[] args) {
+        ComparaNumeroIf comparaNumeroIf = new ComparaNumeroIf(18);
+        comparaNumeroIf.compararNumero();
+    }
+}
+
+ComparaNumeroIf.java
+public class ComparaNumeroIf {
+    private final double numeroIf;
+    public ComparaNumeroIf(double numeroIf){
+        this.numeroIf = numeroIf;
+    }
+    public void compararNumero() {
+       if (numeroIf < 0) {
+            System.out.println("El número es negativo");
+        } else if (numeroIf > 0) {
+            System.out.println("El número es positivo");
+        } else {
+            System.out.println("El número es cero");
+        }
+    }
+
+}
+
 Crea un bucle While, este bucle tendrá que tener como condición que la variable numeroWhile sea inferior a 3, el bloque de código 
 que tendrá el bucle deberá:
 
