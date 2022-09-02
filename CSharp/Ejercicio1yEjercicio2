@@ -1,0 +1,22 @@
+Ejercicio 1
+
+Escribe un programa que reciba tu nombre y lo escriba por consola.
+
+Ejercicio 2
+
+Escribe un programa que tome la hora y la escriba por pantalla.
+
+internal class Program
+{
+    private static string? currentTime;
+
+    private static void Main(string[] args)
+    {
+        currentTime = DateTime.Now.ToString("hh:mmm:ss");
+        Console.WriteLine("Dime tú nombre");
+        string? name = Console.ReadLine();
+        Console.WriteLine("Respuesta Ejercicio1: Mi nombre es " + name);
+        Console.WriteLine("Respuesta Ejercicio2: La hora actual es " + currentTime);
+
+    }
+}
